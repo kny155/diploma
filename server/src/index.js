@@ -3,6 +3,7 @@ import passport from 'passport';
 import bodyParser from 'koa-bodyparser';
 
 import { connectDb } from './model';
+import { routes, allowedMethods } from './routes/routes';
 import configPassport from './config/passport';
 import { PORT } from '../config.json';
 
@@ -12,6 +13,8 @@ configPassport(passport);
 const app = new Koa();
 
 app.use(bodyParser());
+app.use(routes());
+app.use(allowedMethods());
 
 app.listen(PORT, () => {
 	console.log(`Server started (Port: ${PORT})`);
