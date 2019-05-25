@@ -7,7 +7,7 @@
     - [x] parking
     - [x] statistics
     - [x] device
-- [ ] Подключить jwt
+- [x] Подключить jwt
 - [ ] Создать роуты
     - [ ] users, users/:id
     - [ ] parkings, parkings/:id
