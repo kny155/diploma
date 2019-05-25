@@ -1,20 +1,20 @@
 ### Server:
 ###### v1.0.0
 
-- [ ] Подключить БД
-- [ ] Описать модели БД
-    - [ ] user
-    - [ ] parking
-    - [ ] statistics
-    - [ ] device
+- [x] Подключить БД
+- [x] Описать модели БД
+    - [x] user
+    - [x] parking
+    - [x] statistics
+    - [x] device
 - [ ] Подключить jwt
 - [ ] Создать роуты
-    - [ ]  users, users/:id
+    - [ ] users, users/:id
     - [ ] parkings, parkings/:id
     - [ ] statistics, statistics/:id
     - [ ] registration, login, relogin
 - [ ] Реализовать контроллеры и бизнесс логику
-    - [ ]  users
+    - [ ] users
     - [ ] parkings
     - [ ] statistics
     - [ ] authentication

@@ -5,8 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "NODE_PATH=. nodemon src/index.js --exec babel-node",
-    "prettier": "prettier --write \"**/*.js\"",
-    "loaddb": "babel-node common/db/index.js"
+    "prettier": "prettier --write \"**/*.js\""
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
