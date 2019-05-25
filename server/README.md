@@ -11,12 +11,14 @@
 - [x] Создать роуты
     - [x] users, users/:id
     - [x] parkings, parkings/:id
+    - [x] device, device/:id
     - [x] statistics, statistics/:id
     - [x] registration, login, relogin
 - [ ] Реализовать контроллеры и бизнесс логику
-    - [ ] users
-    - [ ] parkings
+    - [x] users
+    - [x] parkings
+    - [ ] device
     - [ ] statistics
-    - [ ] authentication
+    - [x] authentication
 - [ ] Подключить и описать swagger
 - [ ] Добавить скрипт для заполнения БД

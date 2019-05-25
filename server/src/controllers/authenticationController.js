@@ -25,7 +25,7 @@ const authenticationController = {
             const token = await getTokenById(user._id);
             ctx.body = {
                 token: 'JWT ' + token,
-                user: await getUserObj(user),
+                user: getUserObj(user),
             };
         }
 	},
@@ -35,7 +35,7 @@ const authenticationController = {
 		if (!user) {
             ctx.status = 401;
         } else {
-            ctx.body = await getUserObj(user);
+            ctx.body = getUserObj(user);
         }
 	},
 };

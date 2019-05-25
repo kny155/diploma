@@ -1,10 +1,7 @@
 const statisticsController = {
-    add: async ctx => {
+	readById: async ctx => {
 		ctx.body = {};
 	},
-    readById: async ctx => {
-		ctx.body = {};
-    },
 };
 
 export default statisticsController;

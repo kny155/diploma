@@ -1,4 +1,4 @@
-export const getUserObj = async user => {
+export const getUserObj = user => {
 	return {
 		email: user.email,
 		firstName: user.firstName,

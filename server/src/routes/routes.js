@@ -4,6 +4,7 @@ import passport from 'koa-passport';
 import {
 	userController,
     parkingController,
+    deviceController,
     statisticsController,
     authenticationController
 } from '../controllers';
@@ -23,10 +24,14 @@ router
     .put('/users', auth, userController.update)
 	.post('/parkings', auth, parkingController.create)
     .get('/parkings', parkingController.read)
+    .get('/parkings/owner', auth, parkingController.readOwner)
     .get('/parkings/:id', parkingController.readById)
     .put('/parkings/:id', auth, parkingController.update)
     .delete('/parkings/:id', auth, parkingController.delete)
-    .put('/statistics', statisticsController.add)
+    .post('/device', auth, deviceController.add)
+    .delete('/device/:id', auth, deviceController.delete)
+    .get('/device/:id', auth, deviceController.readDevices)
+    .put('/device', deviceController.update)
     .get('/statistics/:id', auth, statisticsController.readById)
     .post('/registration', authenticationController.registration)
     .post('/login', authenticationController.login)

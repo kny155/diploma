@@ -9,7 +9,7 @@ const userController = {
 		if (!user) {
 			ctx.status = 401;
 		} else {
-			ctx.body = await getUserObj(user);
+			ctx.body = getUserObj(user);
 		}
 	},
 	update: async ctx => {
@@ -20,7 +20,7 @@ const userController = {
 		if (!user) {
 			ctx.status = 401;
 		} else {
-			ctx.body = await getUserObj(user);
+			ctx.body = getUserObj(user);
 		}
 	},
 };
