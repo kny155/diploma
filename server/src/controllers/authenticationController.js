@@ -1,5 +1,6 @@
 import {User} from '../model';
 import { getTokenById, getIdByToken } from '../business/authentication';
+import { getUserObj } from '../business/user'
 
 const authenticationController = {
     registration: async ctx => {
@@ -24,14 +25,7 @@ const authenticationController = {
             const token = await getTokenById(user._id);
             ctx.body = {
                 token: 'JWT ' + token,
-                user: {
-                    email: user.email,
-                    firstName: user.firstName,
-                    secondName: user.secondName,
-                    lastName: user.lastName,
-                    phone: user.phone,
-                    email: user.email,
-                },
+                user: await getUserObj(user),
             };
         }
 	},
@@ -41,16 +35,7 @@ const authenticationController = {
 		if (!user) {
             ctx.status = 401;
         } else {
-            ctx.body = {
-                user: {
-                    email: user.email,
-                    firstName: user.firstName,
-                    secondName: user.secondName,
-                    lastName: user.lastName,
-                    phone: user.phone,
-                    email: user.email,
-                },
-            };
+            ctx.body = await getUserObj(user);
         }
 	},
 };

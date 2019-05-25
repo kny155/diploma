@@ -19,8 +19,8 @@ const auth = (ctx, next) =>
 const router = new Router();
 
 router
-    .get('/users/:id', auth, userController.readById)
-    .put('/users/:id', auth, userController.update)
+    .get('/users', auth, userController.readByToken)
+    .put('/users', auth, userController.update)
 	.post('/parkings', auth, parkingController.create)
     .get('/parkings', parkingController.read)
     .get('/parkings/:id', parkingController.readById)
