@@ -7,6 +7,8 @@
     - [ ] main
 - [ ] Создать роуты
     - [ ] /
+    - [ ] /login
+    - [ ] /registration
     - [ ] /profile
     - [ ] /parkings, /parkings/:id, /parkings/add
     - [ ] /settings
