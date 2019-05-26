@@ -6,8 +6,8 @@ import authenticationController from './authenticationController';
 
 module.exports = {
 	userController,
-    parkingController,
-    deviceController,
-    statisticsController,
-    authenticationController
+	parkingController,
+	deviceController,
+	statisticsController,
+	authenticationController,
 };

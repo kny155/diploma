@@ -1,6 +1,11 @@
 import { User, Parking } from '../model';
 import { getIdByToken } from '../business/authentication';
-import { getParkingsObj, getParkingObj, deleteParking, getSeatsNow } from '../business/parking';
+import {
+	getParkingsObj,
+	getParkingObj,
+	deleteParking,
+	getSeatsNow,
+} from '../business/parking';
 
 const parkingController = {
 	create: async ctx => {
@@ -29,13 +34,13 @@ const parkingController = {
 	},
 	readSeats: async ctx => {
 		const id = ctx.params.id;
-		const {devices, seats} = await Parking.findById(id);
-		if(devices.length) {
+		const { devices, seats } = await Parking.findById(id);
+		if (devices.length) {
 			const seatsNow = await getSeatsNow(devices);
 			ctx.body = {
 				seatsMax: seats,
-				seatsNow
-			}
+				seatsNow,
+			};
 		} else {
 			ctx.status = 404;
 		}

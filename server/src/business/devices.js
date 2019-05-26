@@ -10,4 +10,3 @@ export const getDevicesObj = async devices => {
 		devices.map(async device => await getDeviceObj(device)),
 	);
 };
-

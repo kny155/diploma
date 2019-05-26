@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const statisticsSchema = new Schema(
 	{
-        days: { type: Array, required: true},
-        parking: {type: String, required: true}
+		days: { type: Array, required: true },
+		parking: { type: String, required: true },
 	},
 	{ versionKey: false },
 );

@@ -1,6 +1,6 @@
-import {User} from '../model';
+import { User } from '../model';
 import { getIdByToken } from '../business/authentication';
-import { getUserObj } from '../business/user'
+import { getUserObj } from '../business/user';
 
 const userController = {
 	readByToken: async ctx => {

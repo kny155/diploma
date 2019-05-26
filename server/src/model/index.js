@@ -15,9 +15,9 @@ const connectDb = () => {
 };
 
 module.exports = {
-    connectDb,
-    User,
-    Parking,
-    Device,
-    Statistics
+	connectDb,
+	User,
+	Parking,
+	Device,
+	Statistics,
 };

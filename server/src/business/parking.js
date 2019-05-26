@@ -27,20 +27,18 @@ export const deleteParking = async id => {
 	const parking = await Parking.findByIdAndDelete(id);
 	const { parkings } = await User.findById(parking.owner);
 	const newParkings = parkings.filter(parking => parking !== id);
-	await User.findByIdAndUpdate(parking.owner, {parkings: newParkings});
-	await Device.deleteMany({"_id": parking.devices})
-	if(parking.statistics) {
-		await Statistics.findByIdAndDelete(parking.statistics)
+	await User.findByIdAndUpdate(parking.owner, { parkings: newParkings });
+	await Device.deleteMany({ _id: parking.devices });
+	if (parking.statistics) {
+		await Statistics.findByIdAndDelete(parking.statistics);
 	}
-	
-	return await getParkingObj(parking)
-};
 
+	return await getParkingObj(parking);
+};
 
 export const getSeatsNow = async devices => {
 	return await devices.reduce(async (seats, device) => {
-			const {seatsNow} = await Device.findById(device);
-			return seatsNow ? await seats + seatsNow : await seats;
-		}, 0)
+		const { seatsNow } = await Device.findById(device);
+		return seatsNow ? (await seats) + seatsNow : await seats;
+	}, 0);
 };
-
