@@ -24,8 +24,7 @@ const deviceController = {
 		}
   },
   update: async ctx => {
-    const {parkingId, seatsNow} = ctx.request.body;
-    const deviceId = ctx.params.id;
+    const {parkingId, deviceId, seatsNow} = ctx.request.body;
     const {parking} = await Device.findById(deviceId)
     if (parking === parkingId) {
       await Device.findByIdAndUpdate(deviceId, {seatsNow, updateTime: Date.now()})

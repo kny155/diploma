@@ -4,7 +4,6 @@ export const getUserObj = user => {
 		firstName: user.firstName,
 		secondName: user.secondName,
 		lastName: user.lastName,
-		phone: user.phone,
-		email: user.email,
+		phone: user.phone
 	};
 }

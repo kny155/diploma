@@ -20,5 +20,5 @@
     - [x] device
     - [ ] statistics
     - [x] authentication
-- [ ] Подключить и описать swagger
+- [x] Подключить и описать swagger
 - [ ] Добавить скрипт для заполнения БД

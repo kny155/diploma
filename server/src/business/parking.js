@@ -38,11 +38,9 @@ export const deleteParking = async id => {
 
 
 export const getSeatsNow = async devices => {
-	return await Promise.all(
-		devices.reduce(async (seats, device) => {
+	return await devices.reduce(async (seats, device) => {
 			const {seatsNow} = await Device.findById(device);
-			return seatsNow ? seats + seatsNow : seats;
-		}, 0),
-	);
+			return seatsNow ? await seats + seatsNow : await seats;
+		}, 0)
 };
 
