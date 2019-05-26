@@ -25,6 +25,7 @@ router
 	.post('/parkings', auth, parkingController.create)
     .get('/parkings', parkingController.read)
     .get('/parkings/owner', auth, parkingController.readOwner)
+    .get('/parkings/:id/seats', parkingController.readSeats)
     .get('/parkings/:id', parkingController.readById)
     .put('/parkings/:id', auth, parkingController.update)
     .delete('/parkings/:id', auth, parkingController.delete)

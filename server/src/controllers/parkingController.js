@@ -1,6 +1,6 @@
 import { User, Parking } from '../model';
 import { getIdByToken } from '../business/authentication';
-import { getParkingsObj, getParkingObj, deleteParking } from '../business/parking';
+import { getParkingsObj, getParkingObj, deleteParking, getSeatsNow } from '../business/parking';
 
 const parkingController = {
 	create: async ctx => {
@@ -27,6 +27,19 @@ const parkingController = {
 		const ownerParkings = await Parking.find({ _id: parkings });
 		ctx.body = await getParkingsObj(ownerParkings);
 	},
+	readSeats: async ctx => {
+		const id = ctx.params.id;
+		const {devices, seats} = await Parking.findById(id);
+		if(devices.length) {
+			const seatsNow = await getSeatsNow(devices);
+			ctx.body = {
+				seatsMax: seats,
+				seatsNow
+			}
+		} else {
+			ctx.status = 404;
+		}
+	},
 	readById: async ctx => {
 		const id = ctx.params.id;
 		const parking = await Parking.findById(id);
@@ -42,9 +55,6 @@ const parkingController = {
 		const ownerId = await getIdByToken(ctx.headers);
 		const { parkings } = await User.findById(ownerId);
 		const isParking = parkings.some(parking => parking === id);
-		console.log(parkings)
-		console.log(id)
-		console.log(isParking)
 		if (isParking) {
 			await Parking.findByIdAndUpdate(id, newParking);
 			const parking = await Parking.findById(id);

@@ -4,6 +4,7 @@ import { getUserObj } from './user';
 export const getParkingObj = async parking => {
 	const owner = await User.findById(parking.owner);
 	return await {
+		_id: parking._id,
 		name: parking.name,
 		city: parking.city,
 		address: parking.address,
@@ -33,5 +34,15 @@ export const deleteParking = async id => {
 	}
 	
 	return await getParkingObj(parking)
+};
+
+
+export const getSeatsNow = async devices => {
+	return await Promise.all(
+		devices.reduce(async (seats, device) => {
+			const {seatsNow} = await Device.findById(device);
+			return seatsNow ? seats + seatsNow : seats;
+		}, 0),
+	);
 };
 

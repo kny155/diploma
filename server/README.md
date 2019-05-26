@@ -17,7 +17,7 @@
 - [ ] Реализовать контроллеры и бизнесс логику
     - [x] users
     - [x] parkings
-    - [ ] device
+    - [x] device
     - [ ] statistics
     - [x] authentication
 - [ ] Подключить и описать swagger
