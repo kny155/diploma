@@ -1,19 +1,19 @@
 ### Client:
 ###### v1.0.0
 
-- [ ] Создать структуру сайта
-    - [ ] header
-    - [ ] drawer
-    - [ ] main
+- [x] Создать структуру сайта
+    - [x] header
+    - [x] drawer
+    - [x] main
 - [ ] Создать роуты
-    - [ ] /
-    - [ ] /login
-    - [ ] /registration
-    - [ ] /profile
-    - [ ] /parkings, /parkings/:id, /parkings/add
-    - [ ] /settings
+    - [x] /
+    - [x] /login
+    - [x] /registration
+    - [x] /profile
+    - [x] /parkings, /parkings/:id, /parkings/add
+    - [x] /settings
     - [ ] /statistics/:id
-    - [ ] /404
+    - [x] /404
 - [ ] Добавить страницы
     - [ ] login
     - [ ] registration
@@ -24,5 +24,5 @@
     - [ ] parkings/add (добавить)
     - [ ] statistics/:id (просмотр)
     - [ ] settings (настройка устройства по bluetooth)
-    - [ ] 404
+    - [x] 404
 - [ ] Добавить карту на главную страницу
