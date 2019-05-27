@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import PrivateRoute from '../Common/PrivateRoute'
+import PrivateRoute from '../../containers/PrivateRouteContainer'
 
 const useStyles = makeStyles(theme => ({
 	content: {

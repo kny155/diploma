@@ -4,14 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import App from './components/App';
+import AppContainer from './containers/AppContainer';
 import store from './store';
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <CssBaseline />
-            <App />
+            <AppContainer />
         </BrowserRouter>
     </Provider>,
     document.getElementById('root'),

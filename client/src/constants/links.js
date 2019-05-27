@@ -1,5 +1,16 @@
 export const MAIN_LINKS = [
-    {text: "0", path: "/1", icon: "mail"},
-    {text: "1", path: "/2", icon: "mail"},
-    {text: "2", path: "/3", icon: "mail"},
+    {text: "Главная", path: "/", icon: "home"},
+    {text: "Парковки", path: "/parkings", icon: "directions_car"},
+] 
+
+export const USER_LINKS = [
+    {text: "Профиль", path: "/profile", icon: "account_circle"},
+    {text: "Мои парковки", path: "/myparkings", icon: "directions_car"},
+    {text: "Настройка", path: "/settings", icon: "settings"},
+    {text: "Выход", path: "/logout", icon: "exit_to_app"},
+] 
+
+export const GUEST_LINKS = [
+    {text: "Регистрация", path: "/registration", icon: "person_add"},
+    {text: "Вход", path: "/login", icon: "person"},
 ] 

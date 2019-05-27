@@ -1,16 +1,19 @@
 import React, { Fragment, useState } from 'react';
 
-import Header from '../Header';
+import HeaderContainer from '../../containers/HeaderContainer';
 import Content from '../Content';
-import Drawer from '../Drawer';
+import DrawerContainer from '../../containers/DrawerContainer';
 
 const Main = () => {
 	const [openedDrawer, setOpenedDrawer] = useState(false);
 	return (
 		<Fragment>
-			<Header setOpenedDrawer={setOpenedDrawer} />
+			<HeaderContainer setOpenedDrawer={setOpenedDrawer} />
 			<Content />
-			<Drawer openedDrawer={openedDrawer} setOpenedDrawer={setOpenedDrawer} />
+			<DrawerContainer
+				openedDrawer={openedDrawer}
+				setOpenedDrawer={setOpenedDrawer}
+			/>
 		</Fragment>
 	);
 };
