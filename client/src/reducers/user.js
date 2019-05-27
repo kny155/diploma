@@ -1,14 +1,14 @@
 import { SET_USER, REMOVE_USER } from '../actions';
 
 export default function reducer(state = [], action) {
-    switch (action.type) {
-        case SET_USER:
-            return action.user;
+	switch (action.type) {
+		case SET_USER:
+			return action.user;
 
-        case REMOVE_USER:
-            return {};
+		case REMOVE_USER:
+			return {};
 
-        default:
-            return state;
-    }
+		default:
+			return state;
+	}
 }

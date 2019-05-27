@@ -5,20 +5,20 @@ import App from '../components/App';
 import { relogin } from '../actions';
 
 const mapDispatchToProps = dispatch => {
-    return {
-        onRelogin: () => relogin()(dispatch),
-    };
+	return {
+		onRelogin: () => relogin()(dispatch),
+	};
 };
 
 const mapStateToProps = state => ({
-    authenticated: state.authenticated
+	authenticated: state.authenticated,
 });
 
 const AppContainer = withRouter(
-    connect(
-        mapStateToProps,
-        mapDispatchToProps
-    )(App),
+	connect(
+		mapStateToProps,
+		mapDispatchToProps,
+	)(App),
 );
 
 export default AppContainer;

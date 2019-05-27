@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import PrivateRoute from '../../containers/PrivateRouteContainer'
+import PrivateRoute from '../../containers/PrivateRouteContainer';
 
 const useStyles = makeStyles(theme => ({
 	content: {
@@ -25,10 +25,17 @@ const Content = () => {
 			<Switch>
 				<Route exact path="/" component={() => <div>main</div>} />
 				<PrivateRoute path="/profile" component={() => <div>profile</div>} />
-                <Route exact path="/parkings" component={() => <div>parkings</div>} />
-                <PrivateRoute exact path="/parkings/add" component={() => <div>parking add</div>} />
-                <Route path="/parkings/:id" component={({match}) => <div>parkings: {match.params.id}</div>} />
-                <PrivateRoute path="/settings" component={() => <div>settings</div>} />
+				<Route exact path="/parkings" component={() => <div>parkings</div>} />
+				<PrivateRoute
+					exact
+					path="/parkings/add"
+					component={() => <div>parking add</div>}
+				/>
+				<Route
+					path="/parkings/:id"
+					component={({ match }) => <div>parkings: {match.params.id}</div>}
+				/>
+				<PrivateRoute path="/settings" component={() => <div>settings</div>} />
 				<Route path="*" component={() => <Redirect to="/404" />} />
 			</Switch>
 		</main>

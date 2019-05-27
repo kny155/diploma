@@ -12,7 +12,7 @@ import SnackbarContent from '@material-ui/core/SnackbarContent';
 import Icon from '@material-ui/core/Icon';
 
 import { REGEXP, MESSAGE } from '../../config.json';
-import {authenticatedService} from '../../services'
+import { authenticatedService } from '../../services';
 
 const useStyles = makeStyles(theme => ({
 	'@global': {
@@ -96,9 +96,8 @@ const Registration = () => {
 	};
 
 	if (redirect) {
-		return <Redirect to='/login'/>;
-	  }
- 
+		return <Redirect to="/login" />;
+	}
 
 	return (
 		<main className={classes.container}>

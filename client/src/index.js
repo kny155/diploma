@@ -8,11 +8,11 @@ import AppContainer from './containers/AppContainer';
 import store from './store';
 
 ReactDOM.render(
-    <Provider store={store}>
-        <BrowserRouter>
-            <CssBaseline />
-            <AppContainer />
-        </BrowserRouter>
-    </Provider>,
-    document.getElementById('root'),
+	<Provider store={store}>
+		<BrowserRouter>
+			<CssBaseline />
+			<AppContainer />
+		</BrowserRouter>
+	</Provider>,
+	document.getElementById('root'),
 );

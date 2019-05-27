@@ -15,8 +15,8 @@
     - [ ] /statistics/:id
     - [x] /404
 - [ ] Добавить страницы
-    - [ ] login
-    - [ ] registration
+    - [x] login
+    - [x] registration
     - [ ] main
     - [ ] profile (просмотр, изменить)
     - [ ] parkings (просмотр)

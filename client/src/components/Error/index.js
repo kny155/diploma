@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 });
 
 const Error = () => {
-    const classes = useStyles();
+	const classes = useStyles();
 	return (
 		<div className={classes.container}>
 			<Typography component="h4" variant="h6">

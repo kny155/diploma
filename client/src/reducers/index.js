@@ -4,8 +4,8 @@ import { default as authenticated } from './authenticated';
 import { default as user } from './user';
 
 const reducer = combineReducers({
-    authenticated,
-    user
+	authenticated,
+	user,
 });
 
 export default reducer;

@@ -4,13 +4,9 @@ import { withRouter } from 'react-router-dom';
 import Header from '../components/Header';
 
 const mapStateToProps = state => ({
-    authenticated: state.authenticated
+	authenticated: state.authenticated,
 });
 
-const HeaderContainer = withRouter(
-    connect(
-        mapStateToProps
-    )(Header),
-);
+const HeaderContainer = withRouter(connect(mapStateToProps)(Header));
 
 export default HeaderContainer;
